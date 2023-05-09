@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: babar.db.elephantsql.com
+  username: qhkaufxn
+  password: e86-z89jTw-667z2D8HlljFBD7L1pbkm
+  port: 5432
+  database: qhkaufxn
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
